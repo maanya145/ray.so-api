@@ -1,14 +1,8 @@
 {
-    "builds": [
-      {
-        "src": "api.py",
-        "use": "@vercel/python"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/.*",
-        "dest": "api.py"
-      }
-    ]
+  "version": 2,
+  "builds": [{ "src": "api.py", "use": "@vercel/python" }],
+  "env": {
+    "PYTHONUNBUFFERED": "1",
+    "PLAYWRIGHT_BROWSERS_PATH": "0"
   }
+}
