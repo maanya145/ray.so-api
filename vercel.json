@@ -1,17 +1,14 @@
 {
-  "builds": [
-    {
-      "src": "api.py",
-      "use": "@vercel/python"
-    }
-  ],
-  "hooks": {
-    "build": "./build.sh"
-  },
-  "routes": [
-    {
-      "src": "/.*",
-      "dest": "api.py"
-    }
-  ]
-}
+    "builds": [
+      {
+        "src": "api.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/.*",
+        "dest": "api.py"
+      }
+    ]
+  }
