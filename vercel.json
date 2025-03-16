@@ -5,7 +5,5 @@
     "PYTHONUNBUFFERED": "1",
     "PLAYWRIGHT_BROWSERS_PATH": "0"
   },
-  "hooks": {
-    "build": "./build.sh"
-  }
+  "buildCommand": "playwright install"
 }
