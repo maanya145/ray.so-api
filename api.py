@@ -4,7 +4,7 @@ import urllib.parse
 import shutil
 import asyncio
 import subprocess
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Query
 from playwright.async_api import async_playwright
 
 app = FastAPI()
@@ -56,8 +56,12 @@ class RaySoImageGenerator:
 def home():
     return {"message": "Ray.so Image Generator API is running!"}
 
+@app.get("/generate")
 @app.post("/generate")
-async def generate_image(code: str):
+async def generate_image(code: str = Query(None, description="Code snippet to convert into an image")):
+    if not code:
+        raise HTTPException(status_code=400, detail="Code snippet is required.")
+
     generator = RaySoImageGenerator()
     try:
         image_path = await generator.generate_image(code)
