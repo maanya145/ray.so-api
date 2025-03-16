@@ -15,6 +15,5 @@
   "env": {
     "PYTHONUNBUFFERED": "1",
     "PLAYWRIGHT_BROWSERS_PATH": "0"
-  },
-  "buildCommand": "playwright install"
+  }
 }
