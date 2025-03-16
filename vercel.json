@@ -10,5 +10,6 @@
         "src": "/.*",
         "dest": "api.py"
       }
-    ]
-  }
+    ],
+    "buildCommand": "playwright install"
+}
