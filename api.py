@@ -6,10 +6,6 @@ import shutil
 import logging
 from fastapi import FastAPI, Query, HTTPException
 from playwright.async_api import async_playwright
-from playwright.__main__ import main
-
-# Ensure Playwright browsers are installed
-main(["install"])
 
 # Configure logging
 logging.basicConfig(level=logging.DEBUG)
